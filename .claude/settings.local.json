@@ -11,7 +11,14 @@
       "Bash(npm run build:*)",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git -C \"/Users/ravikiran/Apps/claude/multiply game\" config user.name)",
+      "Bash(git -C \"/Users/ravikiran/Apps/claude/multiply game\" config user.email)",
+      "Bash(security find-internet-password:*)",
+      "Bash(security find-generic-password:*)",
+      "Bash(git credential:*)",
+      "Bash(GH_TOKEN=\"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\")",
+      "Bash(curl:*)"
     ]
   }
 }
