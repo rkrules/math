@@ -1,0 +1,110 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 240 10% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 4%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 100% 50%;
+    --secondary-foreground: 240 10% 4%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 5% 40%;
+
+    --accent: 330 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 240 5% 65%;
+
+    --radius: 0.6rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .operation-button {
+    @apply relative flex items-center justify-center w-full p-4 text-lg font-medium transition-all duration-300
+           rounded-xl bg-white shadow-sm border border-transparent hover:shadow-md
+           data-[active=true]:ring-2 data-[active=true]:ring-primary data-[active=true]:border-primary
+           focus:outline-none;
+  }
+  
+  .number-input {
+    @apply w-full text-center text-3xl font-medium bg-transparent outline-none border-b-2 border-primary/20 
+           transition-all duration-200 focus:border-primary py-2;
+  }
+  
+  .question-card {
+    @apply backdrop-blur-md bg-white/80 shadow-xl rounded-2xl p-8 max-w-md w-full
+           border border-white/40 transition-all duration-300;
+  }
+  
+  .game-stats-card {
+    @apply backdrop-blur-sm bg-white/70 shadow-md rounded-xl p-4
+           border border-white/30 transition-all duration-300;
+  }
+}
+
+.math-symbol {
+  font-family: 'Segoe UI', 'Helvetica', sans-serif;
+}
+
+/* Squishmallow Mode */
+.squishmallow {
+  --background: 340 80% 96%;
+  --foreground: 280 30% 20%;
+  --card: 330 60% 97%;
+  --card-foreground: 280 30% 20%;
+  --primary: 300 60% 65%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 170 50% 70%;
+  --secondary-foreground: 280 30% 20%;
+  --muted: 280 30% 92%;
+  --muted-foreground: 280 20% 45%;
+  --accent: 40 90% 70%;
+  --accent-foreground: 280 30% 20%;
+  --border: 300 30% 88%;
+  --input: 300 30% 88%;
+  --ring: 300 40% 70%;
+  --radius: 1.2rem;
+}
+
+.squishmallow .operation-button {
+  @apply rounded-3xl;
+}
+
+.squishmallow .question-card {
+  @apply rounded-3xl;
+  background: hsl(330 60% 97% / 0.9);
+}
+
+.squishmallow .number-input {
+  @apply rounded-2xl border-2 border-primary/30 bg-white/50 px-4;
+}
